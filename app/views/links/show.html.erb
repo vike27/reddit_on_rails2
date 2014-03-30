@@ -1,0 +1,12 @@
+this is the show vieww
+
+
+<h1> This is the show view </h1>
+
+      
+        <%= @link.title %>
+        <%= @link.url %>
+        <%= link_to 'Edit', edit_link_path(@link) %>\
+        <%= link_to 'Destroy', (@link), method: :delete, data: { confirm: 'Are you sure?' } %>
+    
+
