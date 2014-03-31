@@ -5,7 +5,8 @@ class LinksController < ApplicationController
 	end
 
 	def show
-	  @link = Link.find(params[:id])
+	  @link   = Link.find(params[:id])
+	  @comment = Comment.new
 	end
 
 	def new
@@ -33,8 +34,6 @@ class LinksController < ApplicationController
 	def edit
 	  @link = Link.find(params[:id])
 	end
-
-
 
 	def update
 	@link = Link.find params[:id]
