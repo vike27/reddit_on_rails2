@@ -17,6 +17,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'devise'
 
+gem 'will_paginate', '~> 3.0'
+
 
 group :development do
   gem 'sqlite3'
