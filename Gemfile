@@ -19,6 +19,10 @@ gem 'devise'
 
 gem 'will_paginate', '~> 3.0'
 
+gem 'bootstrap-sass' 
+
+
+
 
 group :development do
   gem 'sqlite3'
