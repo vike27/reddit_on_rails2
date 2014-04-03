@@ -1,7 +1,102 @@
-
-
 @import 'bootstrap';
 
+.navbar {
+	border-radius: 0px;
+	font-size: 16px;
+	padding-left: 150px;
+	padding-right: 150px;
+	margin: 0px;
+	background-color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #f0ad4e
+}
+
+.navbar-brand {
+	font-size: 22px;
+}
+
+.navbar-default .navbar-brand {
+	color: #f0ad4e;
+}
+
+.banner-home {
+	height: 550px;
+	background-color: #f0ad4e;
+	padding: 60px;
+}
+
+.banner-logo {
+	margin: 30px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.banner-logo-content {
+	display:inline-block;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid;
+	border-radius: 5px;
+	font-size: 108px;
+	color: white;
+}
+
+.banner-textbox {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.banner-textbox-content {
+	display:inline-block;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 35px;
+	color: white;
+}
+
+.banner-description {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.banner-description-content {
+	display:inline-block;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 16px;
+	color: white;
+}
+
+.banner-version {
+	margin: 30px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+.banner-version-content {
+	display:inline-block;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid;
+	border-radius: 5px;
+	font-size: 30px;
+	color: white;
+}
 
 
 /*

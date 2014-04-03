@@ -1,4 +1,22 @@
-<h1> I am a homepage! </h1>
+<div class="banner-home">
+      <div class="col-md-12">
+        <div class="banner-logo">  
+          <span class="banner-logo-content">E!</span>
+        </div>
+        <div class="banner-textbox">
+          <span class="banner-textbox-content">Crowdsourcing Scientific Innovation</span>
+        </div>
+        <div class="banner-description">
+          <span class="banner-description-content">Discover and collaborate on the most important scientific research of the day</span>
+        </div>
+        <div class="banner-version">
+          <span class="banner-version-content">Beta 1.0</span>
+        </div>
+      </div>
+</div>
+
+
+<h1> Second part of home page! </h1>
 
 	<%= will_paginate @link %>
 <table>
@@ -36,6 +54,9 @@
         <td>Votes: <%= link.votes.where(:up => true).count - link.votes.where(:up => false).count %></td>
       </tr>
     <% end %>
+
+
+
   </tbody>
 </table>
 
