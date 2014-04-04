@@ -1,65 +1,69 @@
-<div class="banner-home">
-      <div class="col-md-12">
-        <div class="banner-logo">  
-          <span class="banner-logo-content">E!</span>
-        </div>
-        <div class="banner-textbox">
-          <span class="banner-textbox-content">Crowdsourcing Scientific Innovation</span>
-        </div>
-        <div class="banner-description">
-          <span class="banner-description-content">Discover and collaborate on the most important scientific research of the day</span>
-        </div>
-        <div class="banner-version">
-          <span class="banner-version-content">Beta 1.0</span>
-        </div>
-      </div>
-</div>
+	<div class="banner-home">
+		<div class="container">
+	      <div class="col-md-12">
+	        <div class="banner-logo">  
+	          <span class="banner-logo-content">E!</span>
+	        </div>
+	        <div class="banner-textbox">
+	          <span class="banner-textbox-content">Crowdsourcing Scientific Innovation</span>
+	        </div>
+	        <div class="banner-description">
+	          <span class="banner-description-content">Discover and collaborate on the most important scientific research of the day</span>
+	        </div>
+	        <div class="banner-version">
+	          <span class="banner-version-content">Beta 1.0</span>
+	        </div>
+	      </div>
+	    </div>
+	</div>
 
 
-<h1> Second part of home page! </h1>
-
-	<%= will_paginate @link %>
-<table>
-  <thead>
-    <tr>
-      <th>title</th>
-      <th>link</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @link.each do |link| %>
-      <tr>
-        <td><%= link.title %></td>
-        <td><%= link.url %></td>
-        <td><%= link_to 'Comments', link %></td>
-        <td><%= link_to 'Show', link %></td>
-        <td><%= link_to 'Edit', edit_link_path(link) %></td>
-        <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><% if current_user && current_user.votes.where(:link_id => link.id, :up => true).present? %>
-    		  *
-  			  <% else %>
-    		  <%= link_to "+", votes_path(:vote => {:link_id => link.id, :up => true}), :method => :post %>
-  		    <% end %>
-        </td>
-        <td><% if current_user && current_user.votes.where(:link_id => link.id, :up => false).present? %>
-    		  ~
-  			  <% else %>
-    		  <%= link_to "-", votes_path(:vote => {:link_id => link.id, :up => false}), :method => :post %>
-  		    <% end %>
-        </td>
-        <td>Votes: <%= link.votes.where(:up => true).count - link.votes.where(:up => false).count %></td>
-      </tr>
-    <% end %>
+   <div class="features-home">
+       <div class="container">
+         <h1 class="feature-title">Research That Matters</h1>
+         <p class="feature-description">Eureka makes scientific discovery and collaboration easy</p>
+         <hr class="half-rule">
+         <div class="row">
+         	<div class="col-sm-4">
+         		<%= image_tag('lab.png') %>
+         		<h2>Crowdsourcing Science</h2>
+         		<p>Submit and vote on the most relavant scientific questions of the day</p>
+         	</div>
+         	<div class="col-sm-4">
+         		<%= image_tag('partnership.png') %>
+         		<h2>Collaboration</h2>
+         		<p>Form teams and collaborate on research topics that interest you</p>
+         	</div>
+         	<div class="col-sm-4">
+         		<%= image_tag('startup.png') %>
+         		<h2>Funding</h2>
+         		<p>The top ideas and teams are set up with tailored financing solutions(crowdfunding, investors, incubators, grants, etc)</p>
+         	</div>
+         <hr class="half-rule">
+       </div>
+   </div>
 
 
 
-  </tbody>
-</table>
+<%= form_for(@premail) do |f| %>
+  <% if @premail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@premail.errors.count, "error") %> prohibited this link from being saved:</h2>
 
+      <ul>
+      <% @premail.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
+  <div class="field">
+    <%= f.label :Email %><br />
+    <%= f.text_field :Email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
 
-<br>

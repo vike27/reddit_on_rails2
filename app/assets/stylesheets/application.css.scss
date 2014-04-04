@@ -98,6 +98,29 @@
 	color: white;
 }
 
+.features-home {
+	margin: 30px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+.features-description {
+	display:inline-block;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid;
+	border-radius: 5px;
+	font-size: 30px;
+	color: white;
+}
+
+.half-rule {
+	width: 100px
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

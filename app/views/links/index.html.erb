@@ -1,5 +1,7 @@
 <h1> This is Index page for links </h1>
+<h2> Second part of home page! </h2>
 
+  <%= will_paginate @link %>
 <table>
   <thead>
     <tr>
@@ -16,14 +18,31 @@
       <tr>
         <td><%= link.title %></td>
         <td><%= link.url %></td>
+        <td><%= link_to 'Comments', link %></td>
         <td><%= link_to 'Show', link %></td>
         <td><%= link_to 'Edit', edit_link_path(link) %></td>
         <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><% if current_user && current_user.votes.where(:link_id => link.id, :up => true).present? %>
+          *
+          <% else %>
+          <%= link_to "+", votes_path(:vote => {:link_id => link.id, :up => true}), :method => :post %>
+          <% end %>
+        </td>
+        <td><% if current_user && current_user.votes.where(:link_id => link.id, :up => false).present? %>
+          ~
+          <% else %>
+          <%= link_to "-", votes_path(:vote => {:link_id => link.id, :up => false}), :method => :post %>
+          <% end %>
+        </td>
+        <td>Votes: <%= link.votes.where(:up => true).count - link.votes.where(:up => false).count %></td>
       </tr>
     <% end %>
+
+
+
   </tbody>
 </table>
 
-
+ <%= link_to "Add a link", new_link_path %>
 
 <br>

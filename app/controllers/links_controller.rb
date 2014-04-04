@@ -1,7 +1,9 @@
 class LinksController < ApplicationController
 
 	def index
-      @link = Link.all
+      @link = Link.paginate(:page => params[:page], :per_page => 3 )
+	  params[:per_page] ||= 25
+	  params[:page]     ||= 1
 	end
 
 	def show
