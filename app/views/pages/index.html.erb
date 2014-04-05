@@ -1,6 +1,4 @@
 	<div class="banner-home">
-		<div class="container">
-	      <div class="col-md-12">
 	        <div class="banner-logo">  
 	          <span class="banner-logo-content">E!</span>
 	        </div>
@@ -12,14 +10,11 @@
 	        </div>
 	        <div class="banner-version">
 	          <span class="banner-version-content">Beta 1.0</span>
-	        </div>
-	      </div>
-	    </div>
+	        </div> 
 	</div>
 
 
    <div class="features-home">
-       <div class="container">
          <h1 class="feature-title">Research That Matters</h1>
          <p class="feature-description">Eureka makes scientific discovery and collaboration easy</p>
          <hr class="half-rule">
@@ -39,31 +34,45 @@
          		<h2>Funding</h2>
          		<p>The top ideas and teams are set up with tailored financing solutions(crowdfunding, investors, incubators, grants, etc)</p>
          	</div>
-         <hr class="half-rule">
-       </div>
-   </div>
-
-
-
-<%= form_for(@premail) do |f| %>
-  <% if @premail.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@premail.errors.count, "error") %> prohibited this link from being saved:</h2>
-
-      <ul>
-      <% @premail.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+         </div>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<hr class="half-rule">
 
+	<div class="subscription-box">
+				<%= form_for @premail, html: {class: "form-horizontal home-form", role: "form"} do |f| %>
+				  <% if @premail.errors.any? %>				    
+				      <h2><%= pluralize(@premail.errors.count, "error") %> prohibited this link from being saved:</h2>
+				      <ul>
+				      <% @premail.errors.full_messages.each do |msg| %>
+				        <li><%= msg %></li>
+				      <% end %>
+				      </ul>
+				  <% end %>
+				  <div class="form-group">
+				  	<div class="subscription-message"> Stay updated for our launch! </div>
+				    <%= f.label :"email" %><br />
+				    <%= f.email_field :email, class:"form-control email-input" %>
+				  </div>
+				  <div class="actions">
+				    <%= f.submit class:"btn btn-default", value:"Submit"%>
+				  </div>
+				<% end %>
+	</div>
+
+<hr class="half-rule">
+
+
+    <div class="footer">
+    <div class="footer-text">Designed for the Love of Science</div>
+      
+      <ul class="footer-linkbox">
+        <a href="#" class="footer-link">About</a>  |
+        <a href="#" class="footer-link">Collaborate</a>  |
+        <a href="#" class="footer-link">FAQ</a>  |
+        <a href="#" class="footer-link">Contact</a>  
+      </ul>
+
+    </div>
+	   
+	 

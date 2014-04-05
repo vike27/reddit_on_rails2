@@ -98,6 +98,11 @@
 	color: white;
 }
 
+.half-rule{
+	width: 100px;
+	margin: 40px auto;
+}
+
 .features-home {
 	margin: 30px;
 	text-align: center;
@@ -118,12 +123,111 @@
 	color: white;
 }
 
-.half-rule {
-	width: 100px
+.subscription-message {
+	margin-bottom: 10px;
+	font-size: 20px;
 }
 
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
+.email-input {
+	width: 200px;
+	display:inline-block;	
+}
+
+.subscription-box{
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;	
+}
+
+.home-form{
+	color: black;
+}
+
+
+.footer {
+	height: 150px;
+	background-color: #f0ad4e;
+	padding: 30px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.footer-text {
+	color: white;
+}
+
+.footer-linkbox {
+	padding-top: 25px;
+}
+
+.footer-link{
+	color: white;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.container-signin {
+	padding-top: 80px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #f0ad4e; 
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+html {
+	height: 100%;
+}
+
+h2 {
+	margin-top: 0px;
+	color: white;
+	margin-bottom: 30px;
+}
+
+h3 {
+	margin-top: 0px;
+	color: white;
+	margin-bottom: 30px;
+}
+
+.new-session-form{
+	width: 500px;
+	margin-right: auto;
+	margin-left: auto;
+	color: white;
+}
+
+.new-registration-form{
+	width: 500px;
+	margin-right: auto;
+	margin-left: auto;
+	color: white;
+}
+
+.btn-custom {
+	width: 120px;
+	background-color: white;
+	color: #f0ad4e;
+}
+
+.container-signup {
+	padding-top: 80px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #f0ad4e; 
+	height: 100%;
+}
+
+
+
+ /* This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
